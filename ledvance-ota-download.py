@@ -35,6 +35,6 @@ for product in products['products']:
 	if not os.path.isfile(path):
 		urlretrieve(url, path)
 		print(path)
-		time.sleep(2.5) # API is limited to 30 calls per minute
+		time.sleep(3) # API is limited to 30 calls per minute
 	else:
 	    print('%s already exists' % fname)
