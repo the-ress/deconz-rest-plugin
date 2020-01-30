@@ -28,7 +28,8 @@ for product in products['products']:
 	url = 'https://api.update.ledvance.com/v1/zigbee/firmwares/download/%s/%s/latest'
 	url = url % (id['company'], id['product'])
 
-	path = '%s/ledvance-%s-%s' % (otapath, id['company'], id['product'])
+	fname = 'ledvance-%s-%s.ota' % (id['company'], id['product'])
+	path = '%s/%s' % (otapath, fname)
 
 	if not os.path.isfile(path):
 		urlretrieve(url, path)
